@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sentinel on NEAR — AI-audited token verdicts</title>
+<style>
+body { font-family: system-ui, sans-serif; max-width: 900px; margin: 2rem auto; padding: 0 1rem; color: #111; }
+h1 { font-size: 1.4rem; } .sub { color: #555; }
+table { border-collapse: collapse; width: 100%; margin-top: 1rem; }
+th, td { border: 1px solid #ccc; padding: 6px 10px; text-align: left; font-size: 0.9rem; }
+.pass { color: #0a7d2c; font-weight: bold; } .fail { color: #b3261e; font-weight: bold; }
+code { background: #f2f2f2; padding: 1px 4px; }
+</style>
+</head>
+<body>
+<h1>Sentinel on NEAR</h1>
+<p class="sub">AI-audited token verdicts, published on-chain to the Verdict Registry on NEAR testnet.
+Quotes are dry 1Click Intents quotes — the agent never executes a swap.</p>
+<p id="meta">Loading…</p>
+<table id="t"><thead><tr><th>Token</th><th>Score</th><th>Verdict</th><th>Ref price</th><th>DEX price</th><th>Liquidity</th><th>Why</th></tr></thead><tbody></tbody></table>
+<h2>Dry quotes (1Click Intents, 10 wNEAR in)</h2>
+<table id="q"><thead><tr><th>Token</th><th>Out</th><th>USD</th><th>Within policy cap</th></tr></thead><tbody></tbody></table>
+<p class="sub">Registry: <code id="reg"></code> · <a id="explorer" href="#" target="_blank">view on NEARBlocks testnet</a></p>
+<script>
+fetch('verdicts.json').then(r => r.json()).then(d => {
+  document.getElementById('meta').textContent = `Run ${d.at} · network ${d.network} · live=${d.live} · policy max swap $${(d.policy.maxSwapUsdCents/100).toFixed(2)}`;
+  document.getElementById('reg').textContent = d.registry;
+  document.getElementById('explorer').href = 'https://testnet.nearblocks.io/address/' + d.registry;
+  document.querySelector('#t tbody').innerHTML = d.results.map(r =>
+    `<tr><td><b>${r.symbol}</b><br><code>${r.account}</code></td><td>${r.score}</td><td class="${r.passed?'pass':'fail'}">${r.passed?'PASS':'FAIL'}</td><td>${r.refPrice ?? '—'}</td><td>${r.dexPrice ?? '—'}</td><td>$${Math.round(r.liqUsd)}</td><td>${r.why.join(', ')}</td></tr>`).join('');
+  document.querySelector('#q tbody').innerHTML = (d.quotes||[]).map(q =>
+    `<tr><td>${q.symbol}</td><td>${q.amountOut} ${q.symbol}</td><td>$${q.amountOutUsd}</td><td>${q.withinPolicy ? 'yes' : 'NO — blocked by policy'}</td></tr>`).join('') || '<tr><td colspan="4">no quotes this run (no PASS tokens besides wNEAR)</td></tr>';
+}).catch(e => { document.getElementById('meta').textContent = 'No verdicts yet — run the agent first: node agent/loop.js --live'; });
+</script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+{
+  "at": "2026-11-10T12:57:02.989Z",
+  "live": true,
+  "network": "testnet",
+  "registry": "sentinel-near.testnet",
+  "policy": {
+    "owner": "sentinel-near.testnet",
+    "maxSwapUsdCents": 10000
+  },
+  "results": [
+    {
+      "symbol": "wNEAR",
+      "account": "wrap.near",
+      "score": 90,
+      "passed": true,
+      "why": [
+        "intents-listed+20",
+        "supply>0+10",
+        "liq $1919495+20",
+        "vol24 $193617+10",
+        "price dev 0.28%+20",
+        "ref price present+10"
+      ],
+      "refPrice": 3.62,
+      "dexPrice": 3.61,
+      "liqUsd": 1919494.86,
+      "supply": "36767949560276773807300114432095"
+    },
+    {
+      "symbol": "USDT",
+      "account": "usdt.tether-token.near",
+      "score": 90,
+      "passed": true,
+      "why": [
+        "intents-listed+20",
+        "supply>0+10",
+        "liq $599519+20",
+        "vol24 $480655+10",
+        "price dev 0.07%+20",
+        "ref price present+10"
+      ],
+      "refPrice": 0.99908,
+      "dexPrice": 0.9984,
+      "liqUsd": 599519.23,
+      "supply": "525944120793709"
+    },
+    {
+      "symbol": "USDC",
+      "account": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+      "score": 80,
+      "passed": true,
+      "why": [
+        "intents-listed+20",
+        "supply>0+10",
+        "liq $121774+20",
+        "vol24 $5857+0",
+        "price dev 0.12%+20",
+        "ref price present+10"
+      ],
+      "refPrice": 0.999524,
+      "dexPrice": 1.00077,
+      "liqUsd": 121773.96,
+      "supply": "78831552502947"
+    },
+    {
+      "symbol": "AURORA",
+      "account": "aaaaaa20d9e0e2461697782ef11675f668207961.factory.bridge.near",
+      "score": 85,
+      "passed": true,
+      "why": [
+        "intents-listed+20",
+        "supply>0+10",
+        "liq $215916+20",
+        "vol24 $11618+5",
+        "price dev 0.40%+20",
+        "ref price present+10"
+      ],
+      "refPrice": 0.04036949,
+      "dexPrice": 0.04053,
+      "liqUsd": 215915.5,
+      "supply": "766664188424484806025839657"
+    },
+    {
+      "symbol": "stNEAR",
+      "account": "meta-pool.near",
+      "score": 75,
+      "passed": true,
+      "why": [
+        "intents-listed+20",
+        "supply>0+10",
+        "liq $4283630+20",
+        "vol24 $23894+5",
+        "price dev 2.23%+10",
+        "ref price present+10"
+      ],
+      "refPrice": 5.38,
+      "dexPrice": 5.5,
+      "liqUsd": 4283630.08,
+      "supply": "14267251586193504361741127372276"
+    }
+  ],
+  "quotes": [
+    {
+      "symbol": "USDT",
+      "amountIn": "10.0",
+      "amountOut": "36.208722",
+      "amountOutUsd": "36.176170358922",
+      "withinPolicy": true
+    },
+    {
+      "symbol": "USDC",
+      "amountIn": "10.0",
+      "amountOut": "36.140673",
+      "amountOutUsd": "36.124012149747",
+      "withinPolicy": true
+    },
+    {
+      "symbol": "AURORA",
+      "amountIn": "10.0",
+      "amountOut": "892.9406200821603871",
+      "amountOutUsd": "36.058719190752",
+      "withinPolicy": true
+    },
+    {
+      "symbol": "stNEAR",
+      "amountIn": "10.0",
+      "amountOut": "6.558952299827248070633566",
+      "amountOutUsd": "35.287163373071",
+      "withinPolicy": true
+    }
+  ]
+}
