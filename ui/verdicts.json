@@ -1,6 +1,6 @@
 {
-  "at": "2026-11-10T12:57:02.989Z",
-  "live": true,
+  "at": "2026-11-10T13:05:24.659Z",
+  "live": false,
   "network": "testnet",
   "registry": "sentinel-near.testnet",
   "policy": {
@@ -16,15 +16,15 @@
       "why": [
         "intents-listed+20",
         "supply>0+10",
-        "liq $1919495+20",
-        "vol24 $193617+10",
-        "price dev 0.28%+20",
+        "liq $1925447+20",
+        "vol24 $191866+10",
+        "price dev 0.00%+20",
         "ref price present+10"
       ],
-      "refPrice": 3.62,
-      "dexPrice": 3.61,
-      "liqUsd": 1919494.86,
-      "supply": "36767949560276773807300114432095"
+      "refPrice": 3.63,
+      "dexPrice": 3.63,
+      "liqUsd": 1925447.31,
+      "supply": "36767444783357192923179164715886"
     },
     {
       "symbol": "USDT",
@@ -34,14 +34,14 @@
       "why": [
         "intents-listed+20",
         "supply>0+10",
-        "liq $599519+20",
-        "vol24 $480655+10",
-        "price dev 0.07%+20",
+        "liq $599400+20",
+        "vol24 $481197+10",
+        "price dev 0.10%+20",
         "ref price present+10"
       ],
-      "refPrice": 0.99908,
-      "dexPrice": 0.9984,
-      "liqUsd": 599519.23,
+      "refPrice": 0.999104,
+      "dexPrice": 0.9981,
+      "liqUsd": 599400.15,
       "supply": "525944120793709"
     },
     {
@@ -57,7 +57,7 @@
         "price dev 0.12%+20",
         "ref price present+10"
       ],
-      "refPrice": 0.999524,
+      "refPrice": 0.999548,
       "dexPrice": 1.00077,
       "liqUsd": 121773.96,
       "supply": "78831552502947"
@@ -71,11 +71,11 @@
         "intents-listed+20",
         "supply>0+10",
         "liq $215916+20",
-        "vol24 $11618+5",
-        "price dev 0.40%+20",
+        "vol24 $11547+5",
+        "price dev 0.34%+20",
         "ref price present+10"
       ],
-      "refPrice": 0.04036949,
+      "refPrice": 0.04039145,
       "dexPrice": 0.04053,
       "liqUsd": 215915.5,
       "supply": "766664188424484806025839657"
@@ -103,29 +103,29 @@
     {
       "symbol": "USDT",
       "amountIn": "10.0",
-      "amountOut": "36.208722",
-      "amountOutUsd": "36.176170358922",
+      "amountOut": "36.276265",
+      "amountOutUsd": "36.242491797285",
       "withinPolicy": true
     },
     {
       "symbol": "USDC",
       "amountIn": "10.0",
-      "amountOut": "36.140673",
-      "amountOutUsd": "36.124012149747",
+      "amountOut": "36.233974",
+      "amountOutUsd": "36.216581692480",
       "withinPolicy": true
     },
     {
       "symbol": "AURORA",
       "amountIn": "10.0",
-      "amountOut": "892.9406200821603871",
-      "amountOutUsd": "36.058719190752",
+      "amountOut": "893.607702634276284423",
+      "amountOutUsd": "36.086068371244",
       "withinPolicy": true
     },
     {
       "symbol": "stNEAR",
       "amountIn": "10.0",
-      "amountOut": "6.558952299827248070633566",
-      "amountOutUsd": "35.287163373071",
+      "amountOut": "6.558952299827223867109092",
+      "amountOutUsd": "35.287163373070",
       "withinPolicy": true
     }
   ]

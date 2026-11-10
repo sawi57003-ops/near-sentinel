@@ -1,6 +1,6 @@
 # Sentinel on NEAR — build status (2026-11-10 ~19:10 WIB)
 
-Deadline: 14 Nov 2026 23:59 UTC (15 Nov 06:59 WIB). Repo: ~/workspace/hackathon/near-sentinel/ (LOCAL ONLY — not public, not pushed).
+Deadline: 14 Nov 2026 23:59 UTC (15 Nov 06:59 WIB). Repo: https://github.com/sawi57003-ops/near-sentinel (PUBLIC, pushed 10 Nov ~20:29 — commit 9710107 + fresh-run update).
 
 ## Toolchain — VERIFIED WORKING
 | Item | Result |
@@ -36,11 +36,15 @@ Deadline: 14 Nov 2026 23:59 UTC (15 Nov 06:59 WIB). Repo: ~/workspace/hackathon/
 Post text (draft for Bre): "Built Sentinel on NEAR at NEAR HACKATHON — an AI agent that audits NEAR tokens, publishes verdicts on-chain, and only quotes swaps inside its spending cap. @NEARProtocol #NEARHackathon" + repo link.
 Record with ffmpeg + Xvfb on the VM, or Bre records on his phone from the dashboard.
 
+## Fresh run (10 Nov 19:57 WIB — pre-submission refresh)
+- Live run `node agent/loop.js --live` re-ran cleanly (exit 0): wNEAR 90, USDT 90, USDC 80, AURORA 85, stNEAR 75 — all PASS; 4 dry quotes (10 wNEAR → 36.21 USDT / 36.14 USDC / 892.94 AURORA / 6.56 stNEAR, all within $100 cap). 5 new `publish_verdict` txs: `8p3UbY5qRzAcK7Mm4Un7mD5gqfS8J4B3Yin9mEuNbcYx` (wNEAR), `9pk8TriLgS2igbyZzSmzSYduPEziedJeTTaKdJoUV8sp` (USDT), `CsaRCD2bYq9zQvVt7je4QcNQJAT89zWWf8KVqfXLe1r7` (USDC), `CfJud8QHLohuw8oNxMDU9cNBA15xQLepLgVEb1XnokuC` (AURORA), `CeBRk2HZox3NA1zEkfdAnsFUd3xkAXCDRJmgrpWCkxaj` (stNEAR). `ui/verdicts.json` refreshed (run 2026-11-10T12:57:02Z).
+- Submission payload draft: `~/workspace/hackathon/near-sentinel-payload.md` (nearAddress `fngyuan24.near` filled; needs leadName/email/size/consent + demoUrl + projectUrl).
+
 ## Remaining (NOT done — needs Bre)
-1. Bre creates the NEAR payout account himself in a NEAR wallet (HACKATHON.md forbids Muse creating it).
+1. ~~Bre creates the NEAR payout account~~ — DONE 10 Nov ~19:51: **fngyuan24.near**, verified on-chain via mainnet RPC (exists, balance 0 NEAR, storage 182 bytes).
 2. Bre posts the demo video on X himself (Muse never posts).
-3. Bre confirms the exact submission payload (projectName, leadName, email, size, tracks, nearAddress, projectUrl, demoUrl, idea, consent) — then the parent sends ONE POST to https://nearhackathon.com/api/applications. NOTHING submitted yet.
-4. Make the repo public + push (needs Bre's confirmation; no remote configured yet).
+3. Bre confirms the exact submission payload (draft ready — see above) — then the parent sends ONE POST to https://nearhackathon.com/api/applications. NOTHING submitted yet.
+4. ~~Make the repo public + push~~ — DONE 10 Nov ~20:29: repo public at https://github.com/sawi57003-ops/near-sentinel, commit 9710107 pushed + verified (remote HEAD matches local).
 
 ## Blockers
 None open. Costs so far: $0 (testnet faucet NEAR only; all quotes dry).
